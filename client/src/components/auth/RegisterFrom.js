@@ -5,7 +5,7 @@ import AlertMessage from "../AlertMessage";
 import logo from "../../assets/images/products/product-05 (1).jpg";
 import Button from "../Button";
 import Helmet from "../Helmet";
-import Header from "../Header";
+
 
 const RegisterForm = () => {
   // Context
@@ -51,7 +51,6 @@ const RegisterForm = () => {
 
   return (
     <>
-      <Header/>
       <Helmet title="Auth">
         <section className="vh-75 login-bg">
           <div className="container py-5 h-100">

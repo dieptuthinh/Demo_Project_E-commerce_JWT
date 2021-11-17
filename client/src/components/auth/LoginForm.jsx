@@ -7,7 +7,6 @@ import AlertMessage from "../AlertMessage";
 import Button from "../Button"
 import logo from "../../assets/images/products/product-08 (1).jpg";
 import { toast } from "react-toastify";
-import Header from '../Header';
 
 // import ilu from "../../assets/images/slider/illustrations.jpg";
 // import gg from "../../assets/images/slider/google.png";
@@ -48,7 +47,6 @@ const LoginForm = () => {
 
     return (
         <>
-            <Header />
             <Helmet title="Auth">
                 <section className="vh-100 login-bg">
                     <div className="container py-5 h-100">
