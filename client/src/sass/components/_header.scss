@@ -66,6 +66,17 @@
                 @include tablet {
                     margin-left: 10px;
                 }
+                &-cart {
+                    position: relative;
+                    z-index: -1;
+                    &__badge {
+                        position: absolute;
+                        top: 5px;
+                        color: $txt-white;
+                        font-size: 10px;
+                        background-color: $main-color;
+                    }
+                }
             }
             @include mobile {
                 font-size: 1.5rem;

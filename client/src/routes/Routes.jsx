@@ -5,10 +5,12 @@ import { Route, Switch } from 'react-router-dom'
 import Home from '../pages/Home'
 import Catalog from '../pages/Catalog'
 import Cart from '../pages/Cart'
+import Success from '../pages/Success'
 import Product from '../pages/Product'
 
 
 import Auth from '../pages/Auth'
+import ProtectedRoute from "../components/routing/ProtectedRoute";
 
 
 const Routes = () => {
@@ -29,6 +31,8 @@ const Routes = () => {
                 render={(props) => <Auth {...props} authRoute="register" />}
             /> 
             <Route path='/cart' component={Cart} />
+            <ProtectedRoute path='/success' component={Success} />
+
         </Switch>
     )
 }

@@ -1,8 +1,9 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { AuthContext } from "../contexts/AuthContext";
 import { useContext } from "react";
 import logo from '../assets/images/Logo-2.png'
+import { useSelector } from 'react-redux';
 
 const mainNav = [
     {
@@ -32,9 +33,14 @@ const Header = () => {
 
     const { pathname } = useLocation()
     const activeNav = mainNav.findIndex(e => e.path === pathname)
+    const cartItems = useSelector((state) => state.cartItems.value)
+    const [totalProducts, setTotalProducts] = useState(0)
 
     const headerRef = useRef(null)
 
+    useEffect(() => {
+        setTotalProducts(cartItems.reduce((total, item) => total + Number(item.quantity), 0))
+    }, [cartItems])
     useEffect(() => {
         window.addEventListener("scroll", () => {
             if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
@@ -88,8 +94,17 @@ const Header = () => {
                             <i className="bx bx-search"></i>
                         </div> */}
                         <div className="header__menu__item header__menu__right__item">
-                            <Link to="/cart">
+                            <Link to="/cart" className="header__menu__right__item-cart">
                                 <i className="bx bx-shopping-bag"></i>
+                                {
+                                    totalProducts !== 0 &&
+                                    <>
+                                        <span className="header__menu__right__item-cart__badge start-100 translate-middle badge rounded-circle">
+                                            {totalProducts}
+                                        </span>
+                                    </>
+                                }
+
                             </Link>
                         </div>
                         {
@@ -98,16 +113,17 @@ const Header = () => {
                                     <div className="header__menu__item header__menu__right__item">
                                         <i className="bx bx-user"></i>
                                     </div>
-                                    <div className="header__menu__item header__menu__right__item">
-                                        <Link to="/login" onClick={logout}>
+                                    <div className="header__menu__item header__menu__right__item ">
+                                        <Link to="/login" onClick={logout} >
                                             <i className="bx bx-log-out"></i>
+
                                         </Link>
                                     </div>
                                 </>
                                 :
                                 <div className="header__menu__item header__menu__right__item">
                                     <Link to="/login">
-                                        <i className= "bx bx-log-in"></i>
+                                        <i className="bx bx-log-in"></i>
                                     </Link>
                                 </div>
                         }
