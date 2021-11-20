@@ -146,7 +146,7 @@ const ProductView = props => {
                         {
                             product.colors.map((item, index) => (
                                 <div key={index} className={`product__info__item__list__item ${color === item ? 'active' : ''}`} onClick={() => setColor(item)}>
-                                    <div className={`circle bg-${item}`}></div>
+                                    <div className={`circle bgc-${item}`}></div>
                                 </div>
                             ))
                         }

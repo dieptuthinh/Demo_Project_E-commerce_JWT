@@ -19,7 +19,7 @@ const Auth = ({ authRoute }) => {
             </div>
 
         )
-    else if (isAuthenticated) return <Redirect to='/' />
+    else if (isAuthenticated) return <Redirect to='/cart' />
     else
         body = (
             <>

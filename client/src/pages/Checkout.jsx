@@ -27,7 +27,7 @@ const Success = () => {
             <Helmet title="Check out">
                 <div className="checkout">
                     <div className="row">
-                        <div className="col-md-6 col-12 checkout__r">
+                        <div className="col-md-6 col-12 col-sm-12 checkout__r">
                             <div className="checkout__info">
                                 <div className="checkout__info__title">
                                     <h2 >Thông tin giao hàng</h2>
@@ -99,7 +99,7 @@ const Success = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-6 col-12 checkout__l">
+                        <div className="col-md-6 col-12 col-sm-12 checkout__l">
                             <div className="checkout__item">
                                 {
                                     cartProducts.map((item, index) => (
@@ -110,11 +110,11 @@ const Success = () => {
                             <hr className="line" />
                             <div className="checkout__discount">
                                 <p className="checkout__discount__text">Bạn có mã giảm giá? Vui lòng nhập tại đây!</p>
-                                <div className="row g-4">
-                                    <div className="col-md-10">
+                                <div className="row g-2">
+                                    <div className="col-12 col-md-10 ">
                                         <input type="text" className="form-control" placeholder="Mã giảm giá" />
                                     </div>
-                                    <div className="col-md-2">
+                                    <div className="col-12 col-md-2 text-end">
                                         <button className="checkout__discount__btn">
                                             Sử dụng
                                         </button>

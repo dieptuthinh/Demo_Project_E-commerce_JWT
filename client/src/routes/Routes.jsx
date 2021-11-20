@@ -4,9 +4,11 @@ import { Route, Switch } from 'react-router-dom'
 
 import Home from '../pages/Home'
 import Catalog from '../pages/Catalog'
+import Men from '../pages/Men'
 import Cart from '../pages/Cart'
-import Success from '../pages/Success'
+import Checkout from '../pages/Checkout'
 import Product from '../pages/Product'
+import MenProduct from '../pages/MenProduct'
 
 
 import Auth from '../pages/Auth'
@@ -19,7 +21,10 @@ const Routes = () => {
             <Route path='/' exact component={Home} />
         
             <Route path='/catalog/:slug' component={Product} />
+            <Route path='/men/:slug' component={MenProduct} />
+
             <Route path='/catalog' component={Catalog} />
+            <Route path='/men' component={Men} />
             <Route
                 exact
                 path="/login"
@@ -31,7 +36,7 @@ const Routes = () => {
                 render={(props) => <Auth {...props} authRoute="register" />}
             /> 
             <Route path='/cart' component={Cart} />
-            <ProtectedRoute path='/success' component={Success} />
+            <ProtectedRoute path='/checkout' component={Checkout} />
 
         </Switch>
     )

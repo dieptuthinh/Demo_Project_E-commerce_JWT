@@ -31,8 +31,8 @@ const Layout = () => {
                 <Route render={props => (
                     <div>
                         <Header {...props} />
-                        <div className="container">
-                            <div className="main">
+                        <div className="wrapper">
+                            <div className="yolo-main">
                                 <Routes />
                             </div>
                         </div>

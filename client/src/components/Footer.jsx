@@ -46,10 +46,10 @@ const footerCustomerLinks = [
 const Footer = () => {
     return (
         <>
-            <div className="container">
+
                 <div className="">
                     <footer className="footer">
-                        {/* <div className="wrapper"> */}
+                        <div className="wrapper">
                         <Grid
                             col={4}
                             mdCol={2}
@@ -115,10 +115,10 @@ const Footer = () => {
                                 </p>
                             </div>
                         </Grid>
-                        {/* </div> */}
+                        </div>
                     </footer>
                 </div>
-            </div>
+
         </>
     )
 }

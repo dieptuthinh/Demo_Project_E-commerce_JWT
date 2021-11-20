@@ -41,7 +41,7 @@ $val in $colors {
     .color-#{$color} {
         color: $val;
     }
-    .bg-#{$color} {
+    .bgc-#{$color} {
         background-color: $val;
     }
 }
@@ -81,7 +81,7 @@ $val in $colors {
     }
 }
 
-.main {
+.yolo-main {
     margin-top: $header-height;
     margin-bottom: 2rem;
     min-height: 100vh;

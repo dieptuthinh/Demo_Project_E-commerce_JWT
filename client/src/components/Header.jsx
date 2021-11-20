@@ -11,12 +11,12 @@ const mainNav = [
         path: "/"
     },
     {
-        display: "Sản phẩm",
+        display: "Nữ",
         path: "/catalog"
     },
     {
-        display: "Phụ kiện",
-        path: "/accessories"
+        display: "Nam",
+        path: "/men"
     },
     {
         display: "Liên hệ",
