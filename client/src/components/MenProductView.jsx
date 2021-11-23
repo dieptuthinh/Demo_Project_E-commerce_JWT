@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react'
+// import ReactImageMagnify from 'react-image-magnify';
+
 import PropTypes from 'prop-types'
 
 import { withRouter } from 'react-router'
@@ -109,27 +111,39 @@ const MenProductView = props => {
         <div className="men__product">
             <div className="men__product__images">
                 <div className="men__product__images__list">
-                    <div className="men__product__images__list__item" onClick={() => setPreviewImg(product.image01)}>
+                    <div className="men__product__images__list__item" onMouseOver={() => setPreviewImg(product.image01)}>
                         <img src={product.image01} alt="" />
                     </div>
-                    <div className="men__product__images__list__item" onClick={() => setPreviewImg(product.image02)}>
+                    <div className="men__product__images__list__item" onMouseOver={() => setPreviewImg(product.image02)}>
                         <img src={product.image02} alt="" />
                     </div>
-                    <div className="men__product__images__list__item" onClick={() => setPreviewImg(product.image03)}>
+                    <div className="men__product__images__list__item" onMouseOver={() => setPreviewImg(product.image03)}>
                         <img src={product.image03} alt="" />
                     </div>
-                    <div className="men__product__images__list__item" onClick={() => setPreviewImg(product.image04)}>
+                    <div className="men__product__images__list__item" onMouseOver={() => setPreviewImg(product.image04)}>
                         <img src={product.image04} alt="" />
                     </div>
-                    <div className="men__product__images__list__item" onClick={() => setPreviewImg(product.image05)}>
+                    <div className="men__product__images__list__item" onMouseOver={() => setPreviewImg(product.image05)}>
                         <img src={product.image05} alt="" />
                     </div>
-                    <div className="men__product__images__list__item" onClick={() => setPreviewImg(product.image06)}>
+                    <div className="men__product__images__list__item" onMouseOver={() => setPreviewImg(product.image06)}>
                         <img src={product.image06} alt="" />
                     </div>
                 </div>
                 <div className="men__product__images__main">
                     <img src={previewImg} alt="" />
+                    {/* <ReactImageMagnify {...{
+                        smallImage: {
+                            alt: 'Wristwatch by Ted Baker London',
+                            isFluidWidth: true,
+                            src: previewImg
+                        },
+                        largeImage: {
+                            src: previewImg,
+                            width: 1200,
+                            height: 1800
+                        }
+                    }} /> */}
                 </div>
                 <div className={`men__product-description ${descriptionExpand ? 'expand' : ''}`}>
                     <div className="men__product-description__title">

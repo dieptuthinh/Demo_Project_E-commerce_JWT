@@ -1,0 +1,147 @@
+.contact {
+    &__header {
+        &__title {
+            flex-basis: 100%;
+            font-size: 30px;
+            text-transform: uppercase;
+            font-weight: 400;
+            line-height: 30px;
+            padding: 10px 0 20px;
+        }
+    }
+    &__body {
+        margin-left: 10px;
+        &__info {
+            @include flex(flex-start, space-between);
+            &-address {
+                padding: 10px;
+                margin-right: 20px;
+                background-color: $input-form-color;
+                @include flex(flex-start, flex-start);
+                &__icon {
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                    border-radius: 40px;
+                    background: $main-color;
+                    color: #fff;
+                    text-align: center;
+                    @include flex(center, center);
+                    font-size: 18px;
+                }
+                &__content {
+                    padding: 5px 0px 0px 10px;
+                    text-align: left;
+                    line-height: 23.8px;
+                    font-size: 14px;
+                    &__title {
+                        margin-bottom: 0;
+                        font-weight: 700;
+                    }
+                }
+            }
+            &-email {
+                padding: 10px;
+                background-color: $input-form-color;
+                margin-right: 20px;
+                @include flex(flex-start, flex-start);
+                &__icon {
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                    border-radius: 40px;
+                    background: $main-color;
+                    color: #fff;
+                    text-align: center;
+                    @include flex(center, center);
+                    font-size: 20px;
+                }
+                &__content {
+                    padding: 5px 0px 0px 10px;
+                    text-align: left;
+                    line-height: 23.8px;
+                    font-size: 14px;
+                    &__title {
+                        margin-bottom: 0;
+                        font-weight: 700;
+                    }
+                }
+            }
+            &-phone {
+                padding: 10px;
+                background-color: $input-form-color;
+                margin-right: 20px;
+                @include flex(flex-start, flex-start);
+                &__icon {
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                    border-radius: 40px;
+                    background: $main-color;
+                    color: #fff;
+                    text-align: center;
+                    @include flex(center, center);
+                    font-size: 18px;
+                }
+                &__content {
+                    padding: 5px 0px 0px 10px;
+                    text-align: left;
+                    line-height: 23.8px;
+                    font-size: 14px;
+                    &__title {
+                        margin-bottom: 0;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+    &__form {
+        margin-top: 10px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        color: $txt-main-color;
+        &__form {
+            font-size: 14px;
+            line-height: 23.8px;
+            text-align: left;
+            &__row {
+                margin-bottom: 15px;
+                input {
+                    border-radius: 0px;
+                    height: 40px;
+                    padding: 0px 15px;
+                    border-left: 2px solid $main-color;
+                    background-color: $input-form-color;
+                }
+                .area {
+                    background-color: $input-form-color;
+                    border-left: 2px solid $main-color;
+                    min-height: 360px;
+                    padding: 10px 15px;
+                    border-radius: 0;
+                    resize: none;
+                }
+            }
+            &__label {
+                margin: 0px 0px 5px
+            }
+            &__label em {
+                color: red;
+            }
+            &__button {
+                border: none;
+                box-shadow: none;
+                outline: none;
+                background: $btn-main-bg;
+                color: $btn-main-color;
+                height: 40px;
+                line-height: 40px;
+                font-weight: bold;
+                padding: 0 20px;
+                border-radius: 5px;
+                display: inline-block;
+            }
+        }
+    }
+}

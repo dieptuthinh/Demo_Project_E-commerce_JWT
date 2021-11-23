@@ -9,7 +9,7 @@ import Cart from '../pages/Cart'
 import Checkout from '../pages/Checkout'
 import Product from '../pages/Product'
 import MenProduct from '../pages/MenProduct'
-
+import Contact from '../pages/Contact'
 
 import Auth from '../pages/Auth'
 import ProtectedRoute from "../components/routing/ProtectedRoute";
@@ -22,6 +22,7 @@ const Routes = () => {
         
             <Route path='/catalog/:slug' component={Product} />
             <Route path='/men/:slug' component={MenProduct} />
+            <Route path='/contact' component={Contact} />
 
             <Route path='/catalog' component={Catalog} />
             <Route path='/men' component={Men} />
