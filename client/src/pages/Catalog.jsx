@@ -9,6 +9,8 @@ import colors from '../assets/fake-data/product-color'
 import size from '../assets/fake-data/product-size'
 import Button from '../components/Button'
 import InfinityList from '../components/InfinityList'
+import { useTranslation } from "react-i18next";
+
 
 const Catalog = () => {
 
@@ -23,7 +25,7 @@ const Catalog = () => {
     const [products, setProducts] = useState(productList)
 
     const [filter, setFilter] = useState(initFilter)
-
+    const { t } = useTranslation();
     const filterSelect = (type, checked, item) => {
         if (checked) {
             switch (type) {
@@ -96,7 +98,7 @@ const Catalog = () => {
 
     return (
         <>
-            <Helmet title="Sản phẩm">
+            <Helmet title={t("womenTitle")}>
                 <div className="catalog">
                     <div className="catalog__filter" ref={filterRef}>
                         <div className="catalog__filter__close" onClick={() => showHideFilter()}>
@@ -104,7 +106,7 @@ const Catalog = () => {
                         </div>
                         <div className="catalog__filter__widget">
                             <div className="catalog__filter__widget__title">
-                                danh mục sản phẩm
+                                {t("category")}
                             </div>
                             <div className="catalog__filter__widget__content">
                                 {
@@ -123,7 +125,7 @@ const Catalog = () => {
 
                         <div className="catalog__filter__widget">
                             <div className="catalog__filter__widget__title">
-                                màu sắc
+                                {t('color')}
                             </div>
                             <div className="catalog__filter__widget__content">
                                 {
@@ -142,7 +144,7 @@ const Catalog = () => {
 
                         <div className="catalog__filter__widget">
                             <div className="catalog__filter__widget__title">
-                                kích cỡ
+                               {t('size')}
                             </div>
                             <div className="catalog__filter__widget__content">
                                 {
@@ -161,12 +163,12 @@ const Catalog = () => {
 
                         <div className="catalog__filter__widget">
                             <div className="catalog__filter__widget__content">
-                                <Button size="sm" onClick={clearFilter}>xóa bộ lọc</Button>
+                                <Button size="sm" onClick={clearFilter}> {t("clearFilter")} </Button>
                             </div>
                         </div>
                     </div>
                     <div className="catalog__filter__toggle">
-                        <Button size="sm" onClick={() => showHideFilter()}>bộ lọc</Button>
+                        <Button size="sm" onClick={() => showHideFilter()}> {t("filter")}</Button>
                     </div>
                     <div className="catalog__content">
                         <InfinityList

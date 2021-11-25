@@ -2,13 +2,15 @@ import React from 'react'
 import Helmet from '../components/Helmet'
 import { Link } from "react-router-dom";
 import Map from '../components/Map';
+import { useTranslation } from "react-i18next";
+
 // import map from '../assets/images/map.png'
 const Contact = () => {
     const key = "AIzaSyA6NgdI9XsU7MrsbkhVD3qNb0UT_reNnaw";
-
+    const { t } = useTranslation();
     return (
         <>
-            <Helmet title="Liên hệ">
+            <Helmet title={t("contactTitle")}>
                 <div className="contact">
                     <div className="contact__header">
                         <h1 className="contact__header__title">Liên hệ</h1>

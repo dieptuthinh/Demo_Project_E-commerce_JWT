@@ -9,6 +9,8 @@ import Button from './Button'
 import { remove } from '../redux/product-modal/productModalSlice'
 
 import productData from '../assets/fake-data/products'
+import { useTranslation } from "react-i18next";
+
 
 const ProductViewModal = () => {
 
@@ -16,6 +18,7 @@ const ProductViewModal = () => {
     const dispatch = useDispatch()
 
     const [product, setProduct] = useState(undefined)
+    const { t } = useTranslation();
 
     useEffect(() => {
         setProduct(productData.getProductBySlug(productSlug))
@@ -30,7 +33,7 @@ const ProductViewModal = () => {
                         size="sm"    
                         onClick={() => dispatch(remove())}
                     >
-                        đóng
+                        {t("closeBtn")}
                     </Button>
                 </div>
             </div>

@@ -7,6 +7,7 @@ import AlertMessage from "../AlertMessage";
 import Button from "../Button"
 import logo from "../../assets/images/products/product-08 (1).jpg";
 import { toast } from "react-toastify";
+import { useTranslation } from "react-i18next";
 
 // import ilu from "../../assets/images/slider/illustrations.jpg";
 // import gg from "../../assets/images/slider/google.png";
@@ -23,7 +24,7 @@ const LoginForm = () => {
     const [alert, setAlert] = useState(null);
 
     const { username, password } = loginForm;
-
+    const { t } = useTranslation();
     const onChangeLoginForm = (event) =>
         setLoginForm({ ...loginForm, [event.target.name]: event.target.value });
 
@@ -47,7 +48,7 @@ const LoginForm = () => {
 
     return (
         <>
-            <Helmet title="Auth">
+            <Helmet title={t("loginTitle")}>
                 <section className="vh-100 login-bg">
                     <div className="container py-5 h-100">
                         <div className="row d-flex justify-content-center align-items-center h-100">

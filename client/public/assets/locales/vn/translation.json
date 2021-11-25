@@ -1,0 +1,65 @@
+{
+
+    "home": "Trang chủ",
+    "pathHome": "/",
+
+    "women": "Nữ",
+    "pathWomen": "/catalog",
+
+    "men": "Nam",
+    "pathMen": "/men",
+
+    "contact": "Liên hệ",
+    "pathContact": "/contact",
+
+
+    "support": "Tổng đài hỗ trợ",
+    "contactTo": "Liên hệ đặt hàng",
+    "problem": "Thắc mắc đơn hàng",
+    "comment": "Góp ý, khiếu nại",
+    "about": "Về Yolo",
+    "aboutDes": "Hướng đến mục tiêu mang lại niềm vui ăn mặc mới mỗi ngày cho hàng triệu người tiêu dùng Việt. Hãy cùng Yolo hướng đến một cuộc sống năng động, tích cực hơn.",
+    "care": "Chăm sóc khách hàng",
+
+
+    "homeTitle": "Trang chủ",
+    "loginTitle": "Đăng nhập",
+    "registerTitle": "Đăng ký",
+    "cartTitle": "Giỏ hàng",
+    "womenTitle": "Sản phẩm nữ",
+    "checkoutTitle": "Thanh toán",
+    "contactTitle": "Liên hệ",
+    "menTitle": "Sản phẩm nam",
+
+
+    "topSale": "top sản phẩm bán chạy trong tuần",
+    "newProduct": "sản phẩm mới",
+    "popular": "Phổ biến",
+
+    "productDetail": "Chi tiết sản phẩm",
+    "detailsBtn": "Xem chi tiết",
+    "buyBtn": "Chọn mua",
+    "closeBtn": "Đóng",
+    "addToCartBtn": "Thêm vào giỏ",
+    "buyNowBtn": "Mua ngay",
+    "moreBtn": "Xem thêm",
+    "collapseBtn": "Thu gọn",
+
+    "color": "Màu sắc",
+    "size": " kích cỡ",
+    "quantity": "số lượng",
+
+    "category": "Danh mục sản phẩm",
+
+    "filter": "Bộ lọc",
+    "clearFilter": "Xoá bộ lọc",
+
+    "available": "Bạn đang có {{totalProducts}} sản phẩm trong giỏ hàng",
+    "intoMoney": "Thành tiền",
+    "currency": "vnđ",
+    "orderBtn": "Đặt hàng",
+    "continueBtn": "Tiếp tục mua hàng"
+
+
+
+}

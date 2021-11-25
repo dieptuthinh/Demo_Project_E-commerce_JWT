@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom'
 import Grid from './Grid'
 
 import logo from '../assets/images/Logo-2.png'
+import { useTranslation } from "react-i18next";
+
 
 const footerAboutLinks = [
     {
@@ -44,6 +46,8 @@ const footerCustomerLinks = [
     }
 ]
 const Footer = () => {
+    const { t } = useTranslation();
+
     return (
         <>
 
@@ -58,23 +62,23 @@ const Footer = () => {
                         >
                             <div>
                                 <div className="footer__title">
-                                    Tổng đài hỗ trợ
+                                    {t("support")}
                                 </div>
                                 <div className="footer__content">
                                     <p>
-                                        Liên hệ đặt hàng <strong>0123456789</strong>
+                                        {t("contactTo")} <strong>0123456789</strong>
                                     </p>
                                     <p>
-                                        Thắc mắc đơn hàng <strong>0123456789</strong>
+                                        {t("problem")} <strong>0123456789</strong>
                                     </p>
                                     <p>
-                                        Góp ý, khiếu nại <strong>0123456789</strong>
+                                        {t("comment")} <strong>0123456789</strong>
                                     </p>
                                 </div>
                             </div>
                             <div>
                                 <div className="footer__title">
-                                    Về Yolo
+                                    {t("about")}
                                 </div>
                                 <div className="footer__content">
                                     {
@@ -90,7 +94,7 @@ const Footer = () => {
                             </div>
                             <div>
                                 <div className="footer__title">
-                                    Chăm sóc khách hàng
+                                    {t("care")}
                                 </div>
                                 <div className="footer__content">
                                     {
@@ -111,7 +115,7 @@ const Footer = () => {
                                     </Link>
                                 </p>
                                 <p>
-                                    Hướng đến mục tiêu mang lại niềm vui ăn mặc mới mỗi ngày cho hàng triệu người tiêu dùng Việt. Hãy cùng Yolo hướng đến một cuộc sống năng động, tích cực hơn.
+                                    {t("aboutDes")}
                                 </p>
                             </div>
                         </Grid>

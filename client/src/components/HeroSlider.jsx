@@ -1,8 +1,9 @@
 import React, { useEffect, useState, useCallback } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
-
+import { useTranslation } from "react-i18next";
 import Button from './Button'
+import { t } from 'i18next';
 
 const HeroSlider = props => {
 
@@ -11,6 +12,8 @@ const HeroSlider = props => {
     const timeOut = props.timeOut ? props.timeOut : 3000
 
     const [activeSlide, setActiveSlide] = useState(0);
+    // eslint-disable-next-line
+    const { t } = useTranslation();
 
     const nextSlide = useCallback(
         () => {
@@ -37,6 +40,7 @@ const HeroSlider = props => {
     }, [nextSlide, timeOut, props])
 
     return (
+        
         <div className="hero-slider">
             {
                 data.map((item, index) => (
@@ -87,7 +91,7 @@ const HeroSliderItem = props => (
                         icon="bx bx-cart"
                         animate={true}
                     >
-                        xem chi tiết
+                        {t("detailsBtn")}
                     </Button>
                 </Link>
             </div>

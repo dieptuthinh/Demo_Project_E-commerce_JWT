@@ -8,6 +8,8 @@ import Button from '../components/Button'
 import productData from '../assets/fake-data/products'
 import numberWithCommas from '../utils/numberWithCommas'
 import CartCheckoutItem from '../components/CartCheckoutItem'
+import { useTranslation } from "react-i18next";
+
 
 
 const Success = () => {
@@ -17,6 +19,7 @@ const Success = () => {
 
 
     const [totalPrice, setTotalPrice] = useState(0)
+    const { t } = useTranslation();
     useEffect(() => {
         setCartProducts(productData.getCartItemsInfo(cartItems))
         setTotalPrice(cartItems.reduce((total, item) => total + (Number(item.quantity) * Number(item.price)), 0))
@@ -24,7 +27,7 @@ const Success = () => {
     }, [cartItems])
     return (
         <>
-            <Helmet title="Check out">
+            <Helmet title={t("checkoutTitle")}>
                 <div className="checkout">
                     <div className="row">
                         <div className="col-md-6 col-12 col-sm-12 checkout__r">

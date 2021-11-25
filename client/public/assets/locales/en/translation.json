@@ -1,0 +1,63 @@
+{
+    "home": "Home",
+    "pathHome": "/",
+
+    "women": "Women",
+    "pathWomen": "/catalog",
+
+    "men": "Men",
+    "pathMen": "/men",
+
+    "contact": "Contact",
+    "pathContact": "/contact",
+
+    "support": "Support call center",
+    "contactTo": "Contact to order",
+    "problem": "Order problems",
+    "comment": "Comments, complaints",
+    "about": "About YOLO",
+    "aboutDes": "Towards the goal of bringing a new joy of dressing every day to millions of Vietnamese consumers. Let's join Yolo towards a more active and positive life.",
+    "care": "Customer care",
+
+
+    "homeTitle": "Home",
+    "loginTitle": "Sign in",
+    "registerTitle": "Sign up",
+    "cartTitle": "Cart",
+    "womenTitle": "Women products",
+    "checkoutTitle": "Checkout",
+    "contactTitle": "Contact",
+    "menTitle": "Men products",
+
+    "topSale": "Top selling products of the week",
+    "newProduct": "New products",
+    "popular": "Popular products",
+
+
+    "productDetail": "Product details",
+    "detailsBtn": "See details",
+    "buyBtn": "Buying",
+    "closeBtn": "Close",
+    "addToCartBtn": "Add to cart",
+    "buyNowBtn": "Buy now",
+    "moreBtn": "More",
+    "collapseBtn": "Collapse",
+
+    "color": "Color",
+    "size": "Size",
+    "quantity": "Quantity",
+
+
+    "category": "Product category",
+    "filter": "Filter",
+    "clearFilter": "Clear filter",
+
+    "available": "You have {{totalProducts}} products in your cart",
+    "intoMoney": "Amount of money",
+    "currency": "$",
+    "orderBtn": "Order",
+    "continueBtn": "Continue shopping"
+
+
+
+}

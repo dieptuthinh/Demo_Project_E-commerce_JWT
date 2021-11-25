@@ -10,10 +10,12 @@ import { remove } from '../redux/product-modal/productModalSlice'
 
 import Button from './Button'
 import numberWithCommas from '../utils/numberWithCommas'
+import { useTranslation } from "react-i18next";
 
 const ProductView = props => {
 
     const dispatch = useDispatch()
+    const { t } = useTranslation();
 
     let product = props.product
 
@@ -119,13 +121,13 @@ const ProductView = props => {
                 </div>
                 <div className={`product-description ${descriptionExpand ? 'expand' : ''}`}>
                     <div className="product-description__title">
-                        Chi tiết sản phẩm
+                        {t("productDetail")}
                     </div>
                     <div className="product-description__content" dangerouslySetInnerHTML={{__html: product.description}}></div>
                     <div className="product-description__toggle">
                         <Button size="sm" onClick={() => setDescriptionExpand(!descriptionExpand)}>
                             {
-                                descriptionExpand ? 'Thu gọn' : 'Xem thêm'
+                                descriptionExpand ? t("collapseBtn") : t("moreBtn")
                             }
                         </Button>
                     </div>
@@ -140,7 +142,7 @@ const ProductView = props => {
                 </div>
                 <div className="product__info__item">
                     <div className="product__info__item__title">
-                        Màu sắc
+                        {t("color")}
                     </div>
                     <div className="product__info__item__list">
                         {
@@ -154,7 +156,7 @@ const ProductView = props => {
                 </div>
                 <div className="product__info__item">
                     <div className="product__info__item__title">
-                        Kích cỡ
+                        {t("size")}
                     </div>
                     <div className="product__info__item__list">
                         {
@@ -170,7 +172,7 @@ const ProductView = props => {
                 </div>
                 <div className="product__info__item">
                     <div className="product__info__item__title">
-                        Số lượng
+                        {t("quantity")}
                     </div>
                     <div className="product__info__item__quantity">
                         <div className="product__info__item__quantity__btn" onClick={() => updateQuantity('minus')}>
@@ -185,19 +187,19 @@ const ProductView = props => {
                     </div>
                 </div>
                 <div className="product__info__item">
-                    <Button onClick={() => addToCart()}>thêm vào giỏ</Button>
-                    <Button onClick={() => goToCart()}>mua ngay</Button>
+                    <Button onClick={() => addToCart()}> { t("addToCartBtn") }</Button>
+                    <Button onClick={() => goToCart()}>{t("buyNowBtn") }</Button>
                 </div>
             </div>
             <div className={`product-description mobile ${descriptionExpand ? 'expand' : ''}`}>
                 <div className="product-description__title">
-                    Chi tiết sản phẩm
+                    {t("productDetail")}
                 </div>
                 <div className="product-description__content" dangerouslySetInnerHTML={{__html: product.description}}></div>
                 <div className="product-description__toggle">
                     <Button size="sm" onClick={() => setDescriptionExpand(!descriptionExpand)}>
                         {
-                            descriptionExpand ? 'Thu gọn' : 'Xem thêm'
+                            descriptionExpand ? t("collapseBtn") : t("moreBtn")
                         }
                     </Button>
                 </div>

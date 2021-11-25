@@ -10,10 +10,12 @@ import { set } from '../redux/product-modal/productModalSlice'
 import Button from './Button'
 
 import numberWithCommas from '../utils/numberWithCommas'
+import { useTranslation } from "react-i18next";
 
 const ProductCard = props => {
 
     const dispatch = useDispatch()
+    const { t } = useTranslation();
 
     return (
         <div className="product-card">
@@ -37,7 +39,8 @@ const ProductCard = props => {
                     animate={true}
                     onClick={() => dispatch(set(props.slug))}
                 >
-                    chọn mua
+                    {t("buyBtn")}
+
                 </Button>
             </div>
         </div>

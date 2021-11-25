@@ -5,6 +5,8 @@ import AlertMessage from "../AlertMessage";
 import logo from "../../assets/images/products/product-05 (1).jpg";
 import Button from "../Button";
 import Helmet from "../Helmet";
+import { useTranslation } from "react-i18next";
+
 
 
 const RegisterForm = () => {
@@ -22,7 +24,7 @@ const RegisterForm = () => {
   const [alert, setAlert] = useState(null);
 
   const { username, email, password, confirmPassword } = registerForm;
-
+const { t } = useTranslation();
   const onChangeRegisterForm = (event) =>
     setRegisterForm({
       ...registerForm,
@@ -51,7 +53,7 @@ const RegisterForm = () => {
 
   return (
     <>
-      <Helmet title="Auth">
+      <Helmet title={t("registerTitle")}>
         <section className="vh-75 login-bg">
           <div className="container py-5 h-100">
             <div className="row d-flex justify-content-center align-items-center h-100">

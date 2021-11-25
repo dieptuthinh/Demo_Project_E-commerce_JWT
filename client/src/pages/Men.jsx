@@ -10,6 +10,8 @@ import size from '../assets/fake-data/product-size'
 import Button from '../components/Button'
 
 import MenInfinityList from '../components/MenInfinityList'
+import { useTranslation } from "react-i18next";
+
 
 const Men = () => {
     const initFilter = {
@@ -24,6 +26,7 @@ const Men = () => {
 
     const [filter, setFilter] = useState(initFilter)
 
+    const { t } = useTranslation();
     const filterSelect = (type, checked, item) => {
         if (checked) {
             switch (type) {
@@ -96,7 +99,7 @@ const Men = () => {
     const showHideFilter = () => filterRef.current.classList.toggle('active')
     return (
         <>
-            <Helmet title="Quần áo nam">
+            <Helmet title={t("menTitle")}>
                 <div className="catalog">
                     <div className="catalog__filter" ref={filterRef}>
                         <div className="catalog__filter__close" onClick={() => showHideFilter()}>

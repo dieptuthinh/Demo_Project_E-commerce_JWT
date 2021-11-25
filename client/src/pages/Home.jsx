@@ -14,11 +14,16 @@ import productData from '../assets/fake-data/products'
 
 import banner from '../assets/images/banner.png'
 
+import { useTranslation } from "react-i18next";
+
+
 
 const Home = () => {
+    const { t } = useTranslation();
+
     return (
         <>
-            <Helmet title="Trang chủ">
+            <Helmet title={t("homeTitle")}>
 
                 {/* hero slider */}
                 <HeroSlider
@@ -55,7 +60,7 @@ const Home = () => {
                 {/* best selling section */}
                 <Section>
                     <SectionTitle>
-                        top sản phẩm bán chạy trong tuần
+                        {t("topSale")}
                     </SectionTitle>
                     <SectionBody>
                         <Grid
@@ -84,7 +89,7 @@ const Home = () => {
                 {/* new arrival section */}
                 <Section>
                     <SectionTitle>
-                        sản phẩm mới
+                        {t("newProduct")}
                     </SectionTitle>
                     <SectionBody>
                         <Grid
@@ -123,7 +128,7 @@ const Home = () => {
                 {/* popular product section */}
                 <Section>
                     <SectionTitle>
-                        phổ biến
+                       {t("popular")}
                     </SectionTitle>
                     <SectionBody>
                         <Grid

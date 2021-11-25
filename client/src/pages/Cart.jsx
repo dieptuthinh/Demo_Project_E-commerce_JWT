@@ -9,6 +9,8 @@ import Button from '../components/Button'
 
 import productData from '../assets/fake-data/products'
 import numberWithCommas from '../utils/numberWithCommas'
+import { useTranslation } from "react-i18next";
+
 
 const Cart = () => {
 
@@ -19,7 +21,7 @@ const Cart = () => {
     const [totalProducts, setTotalProducts] = useState(0)
 
     const [totalPrice, setTotalPrice] = useState(0)
-
+    const { t } = useTranslation();
     useEffect(() => {
         setCartProducts(productData.getCartItemsInfo(cartItems))
         setTotalPrice(cartItems.reduce((total, item) => total + (Number(item.quantity) * Number(item.price)), 0))
@@ -28,21 +30,21 @@ const Cart = () => {
 
     return (
         <>
-            <Helmet title="Giỏ hàng">
+            <Helmet title={t("cartTitle")}>
                 <div className="cart">
                     <div className="cart__info">
                         <div className="cart__info__txt">
                             <p>
-                                Bạn đang có {totalProducts} sản phẩm trong giỏ hàng
+                                {t("available", { totalProducts })}
                             </p>
                             <div className="cart__info__txt__price">
-                                <span>Thành tiền:</span> <span>{numberWithCommas(Number(totalPrice))}</span>
+                                <span>{t("intoMoney")}:</span> <span>{numberWithCommas(Number(totalPrice))} {t("currency") }</span>
                             </div>
                         </div>
                         <div className="cart__info__btn">
                             <Link to="/checkout">
                                 <Button size="block">
-                                    Đặt hàng
+                                    {t("orderBtn")}
                                 </Button>
                             </Link>
                         </div>
@@ -50,7 +52,7 @@ const Cart = () => {
                         <div className="cart__info__btn">
                             <Link to="/catalog">
                                 <Button size="block">
-                                    Tiếp tục mua hàng
+                                    {t("continueBtn")}
                                 </Button>
                             </Link>
                         </div>

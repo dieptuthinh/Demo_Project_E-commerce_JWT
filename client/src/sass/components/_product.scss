@@ -28,7 +28,7 @@
                 position: absolute;
                 top: 0;
                 left: 50%;
-                height: 100vh;
+                height: 100%;
                 width: 95%;
                 transform: translateX(-50%);
             }
@@ -37,8 +37,8 @@
     &__info {
         flex-grow: 1;
         position: sticky;
-        top: $header-shrink-height;
-        padding-top: 2rem;
+        top: 20px;
+        padding-top: 0.5rem;
         @include mobile {
             position: relative;
             top: unset;
